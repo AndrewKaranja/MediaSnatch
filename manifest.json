@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Media Snatch",
+    "version": "1.0.0",
+    "description": "A simple media downloader extension for the web",
+    "permissions": ["downloads", "activeTab", "scripting"],
+    "action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html",
+      "default_title": "Media Snatch"
+    },
+    "icons": {
+      "48": "icon.png"
+    },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["content.js"]
+        }
+      ]
+  }
+  
