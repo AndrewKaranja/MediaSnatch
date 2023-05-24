@@ -7,14 +7,18 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Media Downloader</h1>
+  <h1>Media Snatch</h1>
+  <p>Select Media type to show:</p>
   <select id="media-type">
-    <option value="all">All</option>
     <option value="image">Images</option>
     <option value="video">Videos</option>
     <option value="audio">Audio</option>
     <option value="document">Documents</option>
   </select>
+  <!-- <div id="preview-container" >
+    <p>Preview:</p>
+    <div id="preview"></div>
+  </div> -->
   <div id="media-list" class="media-list"></div>
   <button id="download-btn">Show Media</button>
   <script src="popup.js" type="module"></script>
