@@ -101,5 +101,20 @@ audio {
   object-fit: contain;
 }
 
+.buy-me-a-coffee {
+  margin-top: 1px;
+  text-align: center;
+}
+
+.buy-me-a-coffee a {
+  color: #ff813f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.buy-me-a-coffee a:hover {
+  text-decoration: underline;
+}
+
 
   
