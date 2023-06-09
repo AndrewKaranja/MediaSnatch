@@ -1,4 +1,8 @@
-document.getElementById('download-btn').addEventListener('click', async () => {
+document.getElementById('show-media-btn').addEventListener('click', async () => {
+  
+  
+
+
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     const mediaType = document.getElementById('media-type').value;
   
@@ -27,6 +31,8 @@ document.getElementById('download-btn').addEventListener('click', async () => {
        
         const mediaList = document.getElementById('media-list');
         mediaList.innerHTML = '';
+
+
 
         //Preview code
         const previewContainer = document.getElementById('preview-container');
@@ -65,10 +71,15 @@ function getImageDimensions(url) {
   });
 }
 
-
+console.log(mediaUrls)
   // Check if mediaData is empty
   if (mediaUrls.length === 0) {
+    document.getElementById('no-media').style.display = 'block';
     const message = document.createElement('p');
+    message.style.color='#000'
+    message.style.position='absolute'
+    message.style.top='50%'
+    message.style.margin='auto'
     message.textContent = "No media found on this page or access is blocked.";
     mediaList.appendChild(message);
     return;
@@ -187,6 +198,7 @@ function getImageDimensions(url) {
   li.appendChild(mediaTypeExtText);
   li.appendChild(downloadButtonSecondary);
   mediaList.appendChild(li);
+  mediaList.appendChild(message);
   mediaList.style.marginTop='10px';
  
 
